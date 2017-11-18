@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 13
-  productGUID: e78f70fc71ae74129aa4785a159bd29e
+  productGUID: 2016b5587570d410e8e4cdbebbfb7b53
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   defaultScreenOrientation: 4
@@ -12,7 +12,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: black-hole-client
+  productName: New Unity Project 2
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -420,7 +420,7 @@ PlayerSettings:
   ps4DownloadDataSize: 0
   ps4GarlicHeapSize: 2048
   ps4ProGarlicHeapSize: 2560
-  ps4Passcode: QFE6t3DaLzOnRt0LtcKqPtsNidLsj0G7
+  ps4Passcode: I0r73h3F50pFbpWDl9rPwwjFUy5ioMS6
   ps4pnSessions: 1
   ps4pnPresence: 1
   ps4pnFriends: 1
@@ -466,7 +466,7 @@ PlayerSettings:
   psp2LiveAreaTrialPath: 
   psp2PatchChangeInfoPath: 
   psp2PatchOriginalPackage: 
-  psp2PackagePassword: FSD6WQfpO3cpub9nDRccKUz06KspI6uV
+  psp2PackagePassword: KHEOxFb2DQFoGl0zurOon61G46ysQOxl
   psp2KeystoneFile: 
   psp2MemoryExpansionMode: 0
   psp2DRMType: 0
@@ -521,14 +521,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: black-hole-client
+  metroPackageName: New Unity Project 2
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: black-hole-client
+  metroApplicationDescription: New Unity Project 2
   wsaImages: {}
   metroTileShortName: 
   metroCommandLineArgsFile: 
@@ -602,8 +602,8 @@ PlayerSettings:
   cloudServicesEnabled: {}
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 46774467-d418-47e2-9db1-0d29dc77fae2
-  projectName: black-hole-client
+  cloudProjectId: 03029a45-f09e-43c5-82d0-8bf66909144f
+  projectName: New Unity Project 2
   organizationId: sogimu
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0

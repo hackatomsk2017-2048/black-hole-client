@@ -459,6 +459,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 1220446618624384, guid: 6a8394d90f8c541688b8b914f3d5ac46, type: 2}
   canvas: {fileID: 1900725049}
+--- !u!114 &1218409204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1218409201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bdd23bb1f0c49c38dc73cf85f762d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1356312279 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224761465836785174, guid: 1c0bb096577714f9ab5f179f551261d0,

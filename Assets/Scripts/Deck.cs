@@ -9,10 +9,8 @@ public class Deck : MonoBehaviour
 	public GameObject prefab;
 	public Canvas canvas;
 
-	private Vector3 m_selectedCardsBasePosition = new Vector3(100,100,0);
-
 	private List<Card> m_cards;
-	private List<Card> m_selectedCards;
+	private List<int> m_selectedCards;
 
 	// Use this for initialization
 	void Start ()
@@ -23,7 +21,7 @@ public class Deck : MonoBehaviour
 	private void createCards()
 	{
 		m_cards = new List<Card>();
-		m_selectedCards = new List<Card>();
+		m_selectedCards = new List<int>();
 		
 		Sprite[] cardsImages = Resources.LoadAll<Sprite> ("cards");
 		float absWidth = canvas.GetComponent<RectTransform>().rect.width;
@@ -39,10 +37,10 @@ public class Deck : MonoBehaviour
 			{
 				m_cards.Add(new Card(prefab, canvas.transform, index, new Vector3(
 					-3f * oneAbsW + j * 2f * oneAbsW, 
-					0.5f * oneAbsH + i * 2f * oneAbsH, 
+					0.5f * oneAbsH + i * 3f * oneAbsH, 
 					0f), 
 					cardsImages,
-					Card.CardType.PLUS_2,
+					Card.intToCardType(UnityEngine.Random.Range(0, cardsImages.Length - 1)),
 					this
 				));
 				index++;
@@ -54,14 +52,33 @@ public class Deck : MonoBehaviour
 	public void OnCardClick(int index)
 	{
 		Debug.Log("You have clicked the button! " + Convert.ToString(index));
-		Card card = m_cards[index];
-		m_selectedCards.Add(card);
-		card.setPosition(new Vector3(
-					-200 + m_selectedCards.Count * 100, 
-					-300, 
-					0f));
 
-		Debug.Log(Convert.ToString(m_selectedCards.Count));
+		if (!m_selectedCards.Contains(index)) 
+		{
+			Card card = m_cards[index];
+
+			m_selectedCards.Add(index);
+
+			float absWidth = canvas.GetComponent<RectTransform>().rect.width;
+			float oneAbsW = absWidth / 9; // единица масштабирования ширины - смотреть issue #49
+			float absHeight = canvas.GetComponent<RectTransform>().rect.height;
+			float oneAbsH = absHeight / 16; // единица масштабирования высоты - смотреть issue #49
+
+			if (m_selectedCards.Count < 5)
+			{
+				card.setPosition(new Vector3(
+							-250 + m_selectedCards.Count * 100, 
+							-300, 
+							0f));
+				card.activatePositioning(false);
+
+				Debug.Log(Convert.ToString(m_selectedCards.Count));
+
+			}
+
+		}
+
+
 	}
 
 	// Update is called once per frame

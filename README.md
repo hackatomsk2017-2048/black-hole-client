@@ -1,6 +1,7 @@
 # Black Hole  
 Клиент для игры Black Hole под Android в виде проекта на Unity (версия 2017.2.0f3).  Дизайн проекта [здесь](https://yadi.sk/d/Kilx1lpi3PobdY) и [здесь](https://drive.google.com/drive/folders/1dm2wttfHI-oNY_OrpihKKrbPgtbKwKPG). Также часть дизайна находится в этом репозитории, в папке [Assets/Resources](https://github.com/hackatomsk2017-2048/black-hole-client/tree/master/Assets/Resources). Просим каждого, кто присоединяется к проекту, ознакомиться с [правилами игры](https://github.com/hackatomsk2017-2048/black-hole-client/wiki/%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0-%D0%B8%D0%B3%D1%80%D1%8B) и [стилем оформления кода](https://github.com/hackatomsk2017-2048/black-hole-client/wiki/%D0%A1%D1%82%D0%B8%D0%BB%D1%8C-%D0%BA%D0%BE%D0%B4%D0%B0).   
 Информация по MVP - здесь, [обязательна к прочтению](https://github.com/hackatomsk2017-2048/black-hole-client/wiki/MVP).  
+[Ссылка](https://github.com/hackatomsk2017-2048/black-hole-client-binaries) на репозиторий с бинарниками клиента.  
 
 Проект будет состоять из нескольких чередующихся и активируемых/деактивируемых видов:  
 1. Начальный экран.  

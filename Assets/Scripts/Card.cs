@@ -23,12 +23,26 @@ public class Card : MonoBehaviour {
 		return (int) cardType;
 	}
 
+	public static CardType intToCardType(int index)
+	{
+		switch(index)
+		{
+			case 0: { return CardType.PLUS_1; }; break;
+			case 1: { return CardType.PLUS_2; }; break;
+			case 2: { return CardType.PLUS_3; }; break;
+			case 3: { return CardType.PLUS_4; }; break;
+			case 4: { return CardType.PLUS_5; }; break;
+			case 5: { return CardType.PLUS_6; }; break;
+			case 6: { return CardType.PLUS_7; }; break;
+			case 7: { return CardType.PLUS_8; }; break;
+			case 8: { return CardType.PLUS_9; }; break;
+		}
+		return CardType.PLUS_1;
+	}
+
 	private GameObject m_button;
+	private bool m_positionActivated = true;
 	private int m_id;
-	// private GameObject m_prefab;
-	// private Transform m_transform;
-	// private Vector3 m_position;
-	// private Sprite[] m_cards;
 	private CardType m_cardType;
 
 	public int id()
@@ -43,7 +57,15 @@ public class Card : MonoBehaviour {
 
 	public void setPosition(Vector3 position)
 	{
-		m_button.transform.position = position;
+		if (m_positionActivated)
+		{
+			m_button.transform.position = position;
+		}
+	}
+
+	public void activatePositioning(bool activate)
+	{
+		m_positionActivated = activate;
 	}
 
 	public Card(GameObject prefab, Transform transform, int id, Vector3 position, Sprite[] cards, CardType cardType, Deck deck)
@@ -53,7 +75,7 @@ public class Card : MonoBehaviour {
 
  		m_button = Instantiate(prefab, transform);
  		m_button.transform.position = position;
- 		m_button.transform.localScale = new Vector3(3f, 3f, 3f);
+ 		m_button.transform.localScale = new Vector3(2f, 2f, 2f);
  		// button.GetComponent<Image>().sprite = m_cards[Random.Range(0, m_cards.Length - 1)];
  		m_button.GetComponent<Image>().sprite = cards[Card.cardTypeToInt(cardType)];
  		// button.GetComponent<Image>().sprite = m_cards[0];

@@ -21,13 +21,13 @@ public class CloneCard : MonoBehaviour
 		{
 			for (int j = 0; j < 4; ++j)
 			{
-				GameObject button = Instantiate(prefab, canvas.transform);
-				button.name = "Card" + i.ToString() + j.ToString();
-				button.transform.position = new Vector3(-3f * oneAbsW + j * 2f * oneAbsW, 
-														0.5f * oneAbsH + i * 2f * oneAbsH, 
-														0f);
-				button.transform.localScale = new Vector3(3f, 3f, 3f);
-				button.GetComponent<Image>().sprite = cards[Random.Range(0, cards.Length - 1)];
+		 		GameObject button = Instantiate(prefab, canvas.transform);
+		 		button.name = "Card" + i.ToString() + j.ToString();
+		 		button.transform.position = new Vector3(-3f * oneAbsW + j * 2f * oneAbsW, 
+		 												0.5f * oneAbsH + i * 2f * oneAbsH, 
+		 												0f);
+		 		button.transform.localScale = new Vector3(3f, 3f, 3f);
+		 		button.GetComponent<Image>().sprite = cards[Random.Range(0, cards.Length - 1)];
 			}
 		}
 

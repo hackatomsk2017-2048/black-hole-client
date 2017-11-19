@@ -5,30 +5,29 @@ using UnityEngine.UI;
 
 public class CloneCard : MonoBehaviour 
 {
-	public GameObject button;
+	public GameObject prefab;
 	public Canvas canvas;
-
-	private GameObject[][] buttons;
-
+	
 	// Use this for initialization
-	void Start () 
+	void Start ()
 	{
-		Debug.Log ("wefwef");
-
-		buttons = new GameObject[5][];
-		for (int i = 0; i < 5; i++) {
-			buttons[i] = new GameObject[5];
-		}
-
 		Sprite[] cards = Resources.LoadAll<Sprite> ("cards");
-
-		for (int i = 0; i < 1; i++) {
-			Debug.Log ("1");
-				
-			for (int j = 0; j < 3; j++) {
-
-				GameObject newButton = Instantiate (button, button.transform);
-				newButton.GetComponent<Image> ().overrideSprite = cards [j];
+		// Canvas canvas = GameObject.FindWithTag("Canvas").GetComponent<Canvas>();
+		float absWidth = canvas.GetComponent<RectTransform>().rect.width;
+		float oneAbsW = absWidth / 9; // единица масштабирования ширины - смотреть issue #49
+		float absHeight = canvas.GetComponent<RectTransform>().rect.height;
+		float oneAbsH = absHeight / 16; // единица масштабирования высоты - смотреть issue #49
+		for (int i = 0; i < 3; ++i)
+		{
+			for (int j = 0; j < 4; ++j)
+			{
+				GameObject button = Instantiate(prefab, canvas.transform);
+				button.name = "Card" + i.ToString() + j.ToString();
+				button.transform.position = new Vector3(-3f * oneAbsW + j * 2f * oneAbsW, 
+														0.5f * oneAbsH + i * 2f * oneAbsH, 
+														0f);
+				button.transform.localScale = new Vector3(3f, 3f, 3f);
+				button.GetComponent<Image>().sprite = cards[Random.Range(0, cards.Length - 1)];
 			}
 		}
 

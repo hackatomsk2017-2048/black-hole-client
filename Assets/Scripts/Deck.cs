@@ -81,6 +81,11 @@ public class Deck : MonoBehaviour
 
 	}
 
+	public void goToButtleScene()
+	{
+		Application.LoadLevel("BattleScene");		
+	}
+
 	// Update is called once per frame
 	void Update ()
 	{
